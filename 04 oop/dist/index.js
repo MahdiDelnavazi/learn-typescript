@@ -1,19 +1,38 @@
 "use strict";
 class Account {
-    constructor(id, name, age, balance) {
+    constructor(id, name, age, _balance) {
         this.id = id;
         this.name = name;
         this.age = age;
-        this.balance = balance;
+        this._balance = _balance;
     }
     deposit(amount) {
-        this.balance += amount;
+        this._balance += amount;
     }
-    getBalance() {
-        return this.balance;
+    balance() {
+        return this._balance;
     }
 }
 let account = new Account(1, 'mahdi', 24, 0);
 account.deposit(100);
 console.log(account);
+class Account2 {
+    constructor(id, name, age, _balance) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this._balance = _balance;
+    }
+    get Balance() {
+        return this._balance;
+    }
+    set balance(value) {
+        if (value < 0) {
+            throw new Error('invalid parameter');
+        }
+        else {
+            this._balance = value;
+        }
+    }
+}
 //# sourceMappingURL=index.js.map
