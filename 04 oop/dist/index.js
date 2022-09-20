@@ -40,4 +40,17 @@ class Seats {
 let seats = new Seats();
 seats.A1 = 'mahdi';
 seats['A1'] = 'mahdi';
+class Ride {
+    start() { Ride._activeRiders++; }
+    stop() { Ride._activeRiders--; }
+    static get activeRide() {
+        return Ride._activeRiders;
+    }
+}
+Ride._activeRiders = 0;
+let ride1 = new Ride();
+ride1.start();
+let ride2 = new Ride();
+ride2.start();
+console.log(Ride.activeRide);
 //# sourceMappingURL=index.js.map

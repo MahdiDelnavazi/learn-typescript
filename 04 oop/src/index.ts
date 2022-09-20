@@ -65,3 +65,24 @@ let seats = new Seats();
 // we can use both
 seats.A1 = 'mahdi'
 seats['A1'] = 'mahdi'
+
+
+// use static
+class Ride {
+    private static _activeRiders: number = 0;
+
+    start() { Ride._activeRiders++; }
+    stop() { Ride._activeRiders--; }
+
+    static get activeRide() {
+        return Ride._activeRiders;
+    }
+}
+
+let ride1 = new Ride();
+ride1.start();
+
+let ride2 = new Ride();
+ride2.start();
+
+console.log(Ride.activeRide)
