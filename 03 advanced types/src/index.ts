@@ -54,3 +54,15 @@ quantity = 100;
 // quantity = 110 <- have an error
 
 type Metric = 'cm' | 'inch'; // another example for using Literal
+
+
+// nullable variables 
+function greet(name: string | null) {
+    // check if name is null or not
+    if (name) {
+        console.log(name)
+    } else {
+        console.log('name is a null value')
+    }
+}
+

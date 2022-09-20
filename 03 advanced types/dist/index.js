@@ -23,4 +23,12 @@ let textBox = {
 };
 let quantity = 50;
 quantity = 100;
+function greet(name) {
+    if (name) {
+        console.log(name);
+    }
+    else {
+        console.log('name is a null value');
+    }
+}
 //# sourceMappingURL=index.js.map
