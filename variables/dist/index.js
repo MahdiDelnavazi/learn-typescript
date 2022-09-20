@@ -36,5 +36,13 @@ function calculateTax3(income) {
 }
 function calculateTax4(income) {
 }
-console.log(size.large);
+let employee = { id: 1, name: 'mahdi' };
+let employee2 = { id: 1, name: 'mahdi' };
+let employee3 = {
+    id: 1,
+    name: 'mahdi',
+    retire: (date) => {
+        console.log(date);
+    }
+};
 //# sourceMappingURL=index.js.map
