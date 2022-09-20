@@ -62,7 +62,12 @@ function greet(name: string | null) {
     if (name) {
         console.log(name)
     } else {
-        console.log('name is a null value')
+        console.log('name is null')
     }
 }
 
+// type assertion
+let phone = document.getElementById('phone') as HTMLElement;
+// or 
+let phone2 = <HTMLElement>document.getElementById('phone');
+// now we can have phone.value

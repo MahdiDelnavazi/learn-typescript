@@ -28,7 +28,9 @@ function greet(name) {
         console.log(name);
     }
     else {
-        console.log('name is a null value');
+        console.log('name is null');
     }
 }
+let phone = document.getElementById('phone');
+let phone2 = document.getElementById('phone');
 //# sourceMappingURL=index.js.map
