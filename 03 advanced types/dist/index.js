@@ -33,4 +33,8 @@ function greet(name) {
 }
 let phone = document.getElementById('phone');
 let phone2 = document.getElementById('phone');
+function render(document) {
+    if (typeof document === 'string') {
+    }
+}
 //# sourceMappingURL=index.js.map

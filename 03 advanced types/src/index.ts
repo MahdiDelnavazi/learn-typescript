@@ -71,3 +71,14 @@ let phone = document.getElementById('phone') as HTMLElement;
 // or 
 let phone2 = <HTMLElement>document.getElementById('phone');
 // now we can have phone.value
+
+
+// Narrowing 
+function render(document: unknown) {
+    if (typeof document === 'string') {
+        // now we and compiler knows the document have type string
+        // soo we have string methods in our parameter
+        // document.split
+    }
+}
+
