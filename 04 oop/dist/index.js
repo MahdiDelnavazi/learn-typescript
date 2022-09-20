@@ -35,4 +35,9 @@ class Account2 {
         }
     }
 }
+class Seats {
+}
+let seats = new Seats();
+seats.A1 = 'mahdi';
+seats['A1'] = 'mahdi';
 //# sourceMappingURL=index.js.map

@@ -55,3 +55,13 @@ class Account2 {
         }
     }
 }
+
+
+// index signature property
+class Seats {
+    [seatNumber: string]: string;
+}
+let seats = new Seats();
+// we can use both
+seats.A1 = 'mahdi'
+seats['A1'] = 'mahdi'
