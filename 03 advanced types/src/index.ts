@@ -47,3 +47,10 @@ let textBox: UIWidget = {
     resize: () => { }
 }
 
+// use Literal for exact or specific value
+type Quantity = 50 | 100;
+let quantity: Quantity = 50;
+quantity = 100;
+// quantity = 110 <- have an error
+
+type Metric = 'cm' | 'inch'; // another example for using Literal
