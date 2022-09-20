@@ -15,6 +15,8 @@ let employee: Employee = {
 };
 
 // union types
+let weight: number | string;
+
 function kgToLbs(weight: number | string): number {
     // narrowing : narrow the parameter to specific type 
     if (typeof weight === 'number') {
@@ -25,5 +27,23 @@ function kgToLbs(weight: number | string): number {
         return parseInt(weight) * 2.2
     }
 }
-kgToLbs(10)
-kgToLbs('10') 
+
+kgToLbs(10);
+kgToLbs('10');
+
+// with '&' we can have both types in one variable
+// in this case UIWidget is both Draggable and Resizable
+type Draggable = {
+    drag: () => void
+}
+
+type Resizable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizable;
+let textBox: UIWidget = {
+    drag: () => { },
+    resize: () => { }
+}
+
