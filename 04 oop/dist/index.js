@@ -9,6 +9,9 @@ class Account {
     deposit(amount) {
         this.balance += amount;
     }
+    getBalance() {
+        return this.balance;
+    }
 }
 let account = new Account(1, 'mahdi', 24, 0);
 account.deposit(100);

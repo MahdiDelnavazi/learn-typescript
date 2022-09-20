@@ -3,7 +3,8 @@ class Account {
     id: number;
     name: string;
     age: number;
-    balance: number;
+    private balance: number; // private properties only can read inside class 
+    nickname?: number; // optional property
 
     constructor(id: number, name: string, age: number, balance: number) {
         this.id = id;
@@ -14,6 +15,11 @@ class Account {
 
     deposit(amount: number) {
         this.balance += amount
+    }
+
+    // work with private property
+    getBalance(): number {
+        return this.balance
     }
 }
 // create instance of class
