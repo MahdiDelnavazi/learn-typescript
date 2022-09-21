@@ -129,3 +129,45 @@ function printNames(people: Person[]) {
         console.log(person.fullName)
     }
 }
+
+// abstract
+abstract class Shape {
+    constructor(public color: string) { }
+    abstract render(): void
+}
+class Circle extends Shape {
+    constructor(public radius: number, color: string) {
+        super(color)
+    }
+
+    override render(): void {
+        console.log('rendering circle')
+    }
+}
+
+let circle = new Circle(12, 'red')
+circle.render()
+
+// interface
+// abstract class Calendar {
+//     constructor(public name: string) { }
+
+//     abstract addEvent(): void;
+//     abstract removeEvent(): void;
+// }
+interface ICalendar {
+    name: string;
+    addEven(): void;
+    removeEven(): void;
+}
+
+class GoogleCalendar implements ICalendar {
+    constructor(public name: string) { }
+    addEven(): void {
+        throw new Error("Method not implemented.");
+    }
+    removeEven(): void {
+        throw new Error("Method not implemented.");
+    }
+
+}

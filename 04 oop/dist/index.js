@@ -88,4 +88,31 @@ function printNames(people) {
         console.log(person.fullName);
     }
 }
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Circle extends Shape {
+    constructor(radius, color) {
+        super(color);
+        this.radius = radius;
+    }
+    render() {
+        console.log('rendering circle');
+    }
+}
+let circle = new Circle(12, 'red');
+circle.render();
+class GoogleCalendar {
+    constructor(name) {
+        this.name = name;
+    }
+    addEven() {
+        throw new Error("Method not implemented.");
+    }
+    removeEven() {
+        throw new Error("Method not implemented.");
+    }
+}
 //# sourceMappingURL=index.js.map
