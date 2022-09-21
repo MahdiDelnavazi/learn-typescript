@@ -86,3 +86,28 @@ let ride2 = new Ride();
 ride2.start();
 
 console.log(Ride.activeRide)
+
+// inheritance
+class Person {
+    constructor(public firstName: string, public lastName: string) { }
+
+    get fullName() {
+        return this.firstName + ' ' + this.lastName
+    }
+
+    walk() {
+        console.log('walking')
+    }
+}
+
+class Student extends Person {
+    constructor(public studentId: number, firstName: string, lastName: string) {
+        super(firstName, lastName)
+    }
+
+}
+
+let student = new Student(1, 'mahdi', 'delnavazi')
+// from super class
+student.walk()
+student.firstName
