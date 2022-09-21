@@ -76,7 +76,16 @@ student.walk();
 student.firstName;
 class Teacher extends Person {
     get fullName() {
-        return 'Professor' + super.fullName;
+        return 'Professor ' + super.fullName;
+    }
+}
+printNames([
+    new Student(1, 'mahdi', 'delnavazi'),
+    new Teacher('mahdi', 'delnavazi')
+]);
+function printNames(people) {
+    for (let person of people) {
+        console.log(person.fullName);
     }
 }
 //# sourceMappingURL=index.js.map

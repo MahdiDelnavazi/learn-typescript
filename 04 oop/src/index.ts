@@ -114,6 +114,18 @@ student.firstName;
 // override
 class Teacher extends Person {
     override get fullName() {
-        return 'Professor' + super.fullName;
+        return 'Professor ' + super.fullName;
+    }
+}
+
+// polymorphism
+printNames([
+    new Student(1, 'mahdi', 'delnavazi'),
+    new Teacher('mahdi', 'delnavazi')
+])
+
+function printNames(people: Person[]) {
+    for (let person of people) {
+        console.log(person.fullName)
     }
 }
