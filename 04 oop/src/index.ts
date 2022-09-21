@@ -106,8 +106,14 @@ class Student extends Person {
     }
 
 }
-
-let student = new Student(1, 'mahdi', 'delnavazi')
+let student = new Student(1, 'mahdi', 'delnavazi');
 // from super class
-student.walk()
-student.firstName
+student.walk();
+student.firstName;
+
+// override
+class Teacher extends Person {
+    override get fullName() {
+        return 'Professor' + super.fullName;
+    }
+}

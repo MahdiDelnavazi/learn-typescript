@@ -53,4 +53,30 @@ ride1.start();
 let ride2 = new Ride();
 ride2.start();
 console.log(Ride.activeRide);
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get fullName() {
+        return this.firstName + ' ' + this.lastName;
+    }
+    walk() {
+        console.log('walking');
+    }
+}
+class Student extends Person {
+    constructor(studentId, firstName, lastName) {
+        super(firstName, lastName);
+        this.studentId = studentId;
+    }
+}
+let student = new Student(1, 'mahdi', 'delnavazi');
+student.walk();
+student.firstName;
+class Teacher extends Person {
+    get fullName() {
+        return 'Professor' + super.fullName;
+    }
+}
 //# sourceMappingURL=index.js.map
