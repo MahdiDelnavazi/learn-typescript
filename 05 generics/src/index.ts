@@ -25,7 +25,7 @@ interface Result<T>{
 }
 
 function fetch <T> (url: string): Result<T> {
-    return {data:null , error: null};
+    return {data:null, error: null};
 }
 
 interface User {
@@ -39,5 +39,33 @@ interface Product {
 let resultUser = fetch <User>('user');
 resultUser.data?.userName
 
-let resultProduct = fetch <Product>('user');
+let resultProduct = fetch <Product>('product');
 resultProduct.data?.title
+
+
+// generic inheritance
+interface  Product{
+    name: string,
+    price: number
+}
+
+class Store<T>{
+    protected _objects : T[] = [];
+
+    add(obj: T): void{
+        this._objects.push(obj);
+    }
+} 
+
+// pass on the generic type parameter
+class CompressibleStore<T> extends Store<T> {
+    compress(){}
+}
+ 
+// restrict the generic type parameter
+class SearchebaleStore<T extends {name: string }> extends Store<T>{
+    find(name: string): T | undefined {
+        return this._objects.find(obj => obj.name === name);
+    }
+}
+
