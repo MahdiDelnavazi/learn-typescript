@@ -6,8 +6,10 @@ class KeyValuePair {
         this.value = value;
     }
 }
-let pair = new KeyValuePair('1', '1');
-let pair2 = new KeyValuePair(1, '1');
+let pairNumber = new KeyValuePair('1', '1');
+pairNumber.key.split;
+let pairString = new KeyValuePair(1, '1');
+pairString.key.toExponential;
 class ArrayUtils {
     static wrapInArray(value) {
         return [value];
